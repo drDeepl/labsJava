@@ -1,0 +1,11 @@
+{"configurations": [{
+    "type": "jps-build",
+    "name": "Jps-build configuration",
+}, {
+    "type": "jps-run",
+    "name": "Jps-run configuration",
+    "mainClass": "Game.java",
+    "module": "labsJava",
+},
+    
+],}
