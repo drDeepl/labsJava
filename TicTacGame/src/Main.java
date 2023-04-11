@@ -9,7 +9,7 @@ public class Main {
         gameBoard.printBoard();
         int summ = gameBoard.summOfValueDiagonal(true);
         System.out.println("Summ of diagonal: " + summ);
-        // TODO: Исправить Boolean into boolean
+        
 
 
 

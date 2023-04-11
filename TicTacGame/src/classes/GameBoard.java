@@ -21,8 +21,9 @@ public  class GameBoard {
       return 0;
     }
     else {
-      
-      return Boolean.compare(boardValue, checkedValue);
+      boolean boolBoardValue = boardValue;
+
+      return (boardValue == checkedValue) ? 1 : 0;
       
     }
       
