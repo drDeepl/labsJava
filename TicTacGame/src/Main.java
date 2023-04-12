@@ -1,14 +1,25 @@
-import classes.GameBoard;
+import java.util.Scanner;
+import classes.TicTacGame;
+import classes.User;
 public class Main {
     public static void main(String[] args) throws Exception {
-        GameBoard gameBoard = new GameBoard(3,3);
-        gameBoard.printBoard();
-        gameBoard.setTrue(2,2);
-        gameBoard.setTrue(1,1);
-        gameBoard.setTrue(0,0);
-        gameBoard.printBoard();
-        int summ = gameBoard.summOfValueDiagonal(true);
-        System.out.println("Summ of diagonal: " + summ);
+        User userX = new User("user1", true);
+        User userO = new User("user2", false);
+        TicTacGame ttgame = new TicTacGame(3, 3);
+        ttgame.printBoard();
+        boolean isWin = false;
+
+        while (!isWin){
+            Scanner inIdx = new Scanner(System.in);
+            System.out.println("Ходит первый игрок\n Введи номер ячейки.\nНапример: 12, 1 - строка, 2 - колонка");
+            int valueUser = inIdx.nextInt();
+            Scanner inValue = new Scanner(System.in);
+            System.out.println("Введи + илл 0, где + - крестик,  - нолик");
+            String input = inValue.trim();
+            boolean value = (inValue.trim() == "+" )? true : false;
+
+            
+        }
         
 
 

@@ -21,7 +21,7 @@ public  class GameBoard {
       return 0;
     }
     else {
-      boolean boolBoardValue = boardValue;
+      // boolean boolBoardValue = boardValue;
 
       return (boardValue == checkedValue) ? 1 : 0;
       
@@ -29,7 +29,7 @@ public  class GameBoard {
       
   }
   
-  public int summOfValuesRow(int row, boolean value){
+  protected int summOfValuesRow(int row, boolean value){
     int summ = 0;
     for(int column = 0; column<columns; column++){
       Boolean boardValue = board[row*columns + column];
@@ -38,7 +38,7 @@ public  class GameBoard {
     return summ;
   }
   
-  public int summOfValuesColumn(int column, boolean value){
+  protected int summOfValuesColumn(int column, boolean value){
     int summ = 0;
     for(int row = 0; row<rows; row++){
       Boolean boardValue = board[row*columns + column];
@@ -48,7 +48,7 @@ public  class GameBoard {
     return summ;
   }
   
-  public int summOfValueDiagonal(boolean value){
+  protected int summOfValueDiagonal(boolean value){
     int summ = 0;
     for(int row = 0; row<rows; row++){
       System.out.println(row*columns + row);
@@ -60,7 +60,7 @@ public  class GameBoard {
     return summ;
   }
   
-  public int summOfSideDiagonal(boolean value){
+  protected int summOfSideDiagonal(boolean value){
     int summ = 0;
     for(int row = 0; row < rows; row++){
       Boolean boardValue = board[rows*columns - row-1];
@@ -83,15 +83,12 @@ public  class GameBoard {
     }
    System.out.println(boardPrinted);
   }
-  public void getSize(){
-    System.out.println(size);
+  public void getDim(){
+    System.out.println(size/columns);
   }
   
-  public void setTrue(int row, int column){
-    board[row*columns + column] = true;    
+  protected void setValue(int row, int column, boolean value){
+    board[row*columns + column] = value;    
   }
   
-  public void setFalse(int row, int column){
-    board[row*columns + column] = false;    
-  }
 }
