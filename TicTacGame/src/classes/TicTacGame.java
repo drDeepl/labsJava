@@ -3,17 +3,19 @@ package classes;
 public class TicTacGame extends GameBoard {
     
     public TicTacGame(int rows, int columns){
-        super(rows, columns);
+super(rows, columns);
     }
 
     public boolean checkWin(int row, int column, boolean value){
+        boolean result = false;
         if(summOfValuesRow(row, value) == 3 ||  summOfValuesColumn(column, value) == 3 || summOfValueDiagonal(value) == 3 || summOfSideDiagonal(value) == 3){
-            return true;
+            result = true;
             }
-        return false;   
+        return result;
     }
-
-    public void takeStep (int row, in column, boolean value){
+    public void takeStep(int row, int column, boolean value){
         setValue(row, column, value);
     }
+
+
 }

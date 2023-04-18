@@ -5,10 +5,16 @@ public class User {
     private String username;
 
     public User(String username, boolean isX){
+        this.username = username;
         this.isX = isX;
     }
 
-    public boolean getIsX(){
+    public boolean getStepValue(){
         return isX;
     }
+
+    public String getUsername(){
+        return username;
+    }
+
 }

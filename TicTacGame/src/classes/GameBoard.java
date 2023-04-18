@@ -86,9 +86,21 @@ public  class GameBoard {
   public void getDim(){
     System.out.println(size/columns);
   }
-  
-  protected void setValue(int row, int column, boolean value){
-    board[row*columns + column] = value;    
+
+  public int getSize(){
+    return size;
+  }
+  public void setValue(int row, int column, boolean value){
+    board[row*columns + column] = value;
   }
   
+
+
+  public boolean cellIsEmpty(int row, int column){
+    Boolean testValue = null;
+    if(board[row*columns + column] == testValue){
+      return false;
+    }
+    return true;
+  }
 }
