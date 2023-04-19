@@ -7,9 +7,9 @@ public  class GameBoard {
   private int rows;
   private int columns;
 
-  public GameBoard(int rows, int columns){
-    this.rows = rows;
-    this.columns = columns;
+  public GameBoard(int dimension){
+    this.rows = dimension;
+    this.columns = dimension;
     size = rows*columns;
     board = new Boolean[size];
   }
@@ -21,7 +21,7 @@ public  class GameBoard {
       return 0;
     }
     else {
-      // boolean boolBoardValue = boardValue;
+      
 
       return (boardValue == checkedValue) ? 1 : 0;
       
@@ -83,8 +83,8 @@ public  class GameBoard {
     }
    System.out.println(boardPrinted);
   }
-  public void getDim(){
-    System.out.println(size/columns);
+  public int getDim(){
+    return size/columns;
   }
 
   public int getSize(){
