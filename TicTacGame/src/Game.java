@@ -28,18 +28,19 @@ public class Game {
             User currentUser = users[lastStepUser];
             System.out.println("Player " + currentUser.getUsername() + " walks" + "\nEnter the cell number.\nExample 12, where 1 - number of row\t2- number of column");
             int valueUser = 0;
-            int row = valueUser/10;
-            int column = valueUser % 10;
             int sizeBoard = ttgame.getSizeBoard();
-            boolean userStepValue = currentUser.getStepValue();
-            try{
-                valueUser = idCell.nextInt();
-
-            }catch (InputMismatchException e){
-                valueUser = sizeBoard;              
-
+            int row = sizeBoard;
+            int column = row;
+            String enterValue = idCell.nextLine();
+            if(ttgame.validValue(enterValue)){
+                valueUser = Integer.parseInt(enterValue);
+                row = valueUser/10;
+                column = valueUser % 10;
+                
             }
-            finally{ 
+            
+            boolean userStepValue = currentUser.getStepValue();
+           
             
             if(row < sizeBoard && column < sizeBoard ){
                 
@@ -72,7 +73,7 @@ public class Game {
             System.out.println("Cell is not exists!");
         }
         
-        }
+        
     }
     System.out.println(usernameWins + " is win!");
             

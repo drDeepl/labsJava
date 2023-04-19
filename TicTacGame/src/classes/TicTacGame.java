@@ -18,6 +18,11 @@ public class TicTacGame extends GameBoard {
         setValue(row, column, value);
     }
 
+    public boolean validValue(String value){
+        String pattern = "^?\\d{2}?$";
+        return value.matches(pattern);
+    }
+    
     public int getSizeBoard(){
         return getDim();
     }
